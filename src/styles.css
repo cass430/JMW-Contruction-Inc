@@ -9,7 +9,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Jost", sans-serif;
+}
+
+body {
   background-color: #000000;
+}
+
+p {
+  font-size: 20px;
 }
 
 li,
@@ -17,6 +25,7 @@ a,
 button {
   color: #fff;
   text-decoration: none;
+  font-size: 20px;
 }
 
 .contact-btn {
@@ -25,7 +34,7 @@ button {
 }
 
 header {
-  width: 1000px;
+  width: 60%;
   margin: 0 auto;
   display: flex;
   justify-content: flex-end;
@@ -77,24 +86,26 @@ button:hover {
 }
 
 .image-container {
+  margin: 0 auto;
+  max-width: 60%;
   text-align: center;
   position: relative;
   display: block;
 }
 
 img {
-  width: 1000px;
+  width: 100%;
   height: auto;
 }
 
 .overlay {
   position: absolute; /* Position the overlay absolutely within the container */
   top: 80%; /* Position it in the middle vertically */
-  left: 40%; /* Position it in the middle horizontally */
+  left: 25%; /* Position it in the middle horizontally */
   transform: translate(-50%, -50%); /* Center it exactly */
   background: rgba(255, 225, 64, 0.9); /* Semi-transparent background */
   color: white; /* Text color */
-  padding: 20px; /* Padding inside the box */
+  padding: 10px; /* Padding inside the box */
   border-radius: 6px; /* Optional: rounded corners */
   text-align: center; /* Center text within the box */
   font-size: 30px;
@@ -110,20 +121,274 @@ img {
 .container {
   margin: 0 auto;
   background-color: #ffffff;
-  width: 1000px;
-  height: 100px;
+  width: 60%;
+  height: auto;
 }
 
 h1 {
   background-color: #ffffff;
+  padding-top: 10px;
 }
 
 .intro {
-  background-color: #fff;
+  margin: 0 auto;
+  max-width: 80%; /* Add space between the intro and promise-container */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 18px;
 }
 
+.intro a {
+  color: #000000;
+  text-decoration: underline;
+  font-weight: 900;
+}
+
+.intro a:hover {
+  color: var(--primary-dark);
+}
+
+.intro p {
+  margin: 0; /* Remove default margin */
+  flex-grow: 1; /* Allow p to grow and take available space */
+}
+
+.promise-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* Stack promise items vertically */
+  gap: 20px; /* Space between promise items */
+  margin-bottom: 20px;
+}
+
+.promise-item1,
+.promise-item2 {
+  display: flex;
+
+  align-items: center; /* Align items vertically within each promise item */
+  gap: 20px; /* Space between image and text */
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+
+.promise-image {
+  width: 300px; /* Set a specific width for the images */
+  height: auto; /* Maintain aspect ratio of the images */
+}
+
+.promise-text {
+  font-size: 16px; /* Font size for the text */
+  color: #000; /* Text color */
+}
+
+.second-image-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  background-color: var(--primary-color);
+  justify-content: center;
+  padding: 30px 10px;
+}
+
+.sig-container {
+  position: relative;
+  width: 60%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sig {
+  max-width: 100%;
+  height: auto;
+  display: block;
+
+  filter: grayscale();
+  transition: filter 0.4s ease-in-out;
+}
+.sig-container:hover .sig {
+  filter: none;
+}
+
+.sig-overlay {
+  position: absolute;
+  top: 75%;
+
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #000000;
+
+  color: #ffffff;
+  border-radius: 6px;
+
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.sig-container:hover .sig-overlay {
+  opacity: 0.8; /* Show overlay on hover */
+}
+
+.bot-container {
+  background-color: white;
+  width: 60%;
+  margin: 0 auto;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.bot-img-container {
+  margin: 0 auto;
+  max-width: 90%;
+  height: auto;
+  background-color: #fff;
+  background-image: url("../images/jmw_image07.jpg");
+  background-size: cover;
+  background-position: center; /* Optional: Centers the image in the container */
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bot-content {
+  width: 90%;
+  padding-bottom: 20px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.footer-container {
+  margin: 0 40px;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  border-top: 2px solid var(--primary-color);
+}
+
+.footer-links {
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: center; /* Center the links horizontally */
+  align-items: center;
+}
+
+.footer-links ul {
+  display: flex; /* Make the list items horizontal */
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.footer-links li {
+  margin: 0 10px; /* Space between each link */
+  position: relative; /* Position relative for the separator */
+}
+
+.footer-links li:not(:last-child)::after {
+  content: "|"; /* Separator between links */
+  position: absolute;
+  right: -15px; /* Position the separator to the right of the link */
+  color: #fff; /* Color of the separator */
+}
+
+@media (max-width: 1200px) {
+  .second-image-group {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sig-container {
+    width: 100%;
+    flex-direction: column; /* Make the container full-width on smaller screens */
+  }
+  .overlay {
+    font-size: 24px; /* Adjust font size for tablets */
+    padding: 15px; /* Increase padding if needed */
+    width: 90%; /* Make the overlay slightly wider on smaller screens */
+    left: 50%;
+  }
+}
+
+/* tablet screens*/
 @media (max-width: 899px) {
   .buffer {
-    margin-left: 50%;
+    margin-left: auto; /* Center element horizontally */
+    margin-right: auto; /* Center element horizontally */
+    width: fit-content; /* Adjust width based on content */
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  .image-container {
+    max-width: 100%;
+  }
+
+  .promise-item1,
+  .promise-item2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0px;
+  }
+  .promise-image {
+    width: 80%; /* Set a specific width for the images */
+    height: auto; /* Maintain aspect ratio of the images */
+  }
+
+  .promise-text {
+    width: 80%;
+  }
+
+  .second-image-group {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sig-container {
+    width: 100%;
+    flex-direction: column; /* Make the container full-width on smaller screens */
+  }
+
+  .sig-overlay {
+    position: static; /* Change position to static to stack below the image */
+    width: 100%; /* Make the overlay full-width */
+    height: auto; /* Adjust height based on content */
+    margin-top: 10px; /* Add margin to separate from the image */
+    padding: 15px; /* Adjust padding for better appearance on small screens */
+    font-size: 4vw; /* Adjust font size for readability */
+    opacity: 0.8;
+  }
+
+  .sig-container .sig {
+    filter: none;
+  }
+
+  .sig-overlay .text-box {
+    font-size: 4vw;
+  }
+
+  .bot-container {
+    width: 100%;
   }
 }
