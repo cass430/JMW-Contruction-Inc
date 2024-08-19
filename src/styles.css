@@ -1,0 +1,129 @@
+/* fonts */
+:root {
+  --primary-color: #ffe140;
+  --primary-dark: #ffd700;
+  --primary-light: #ffeb80;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+}
+
+li,
+a,
+button {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-btn {
+  color: #000000;
+  font-weight: 700;
+}
+
+header {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px;
+}
+
+.logo {
+  margin-right: auto; /*makes the logo go to the left*/
+  cursor: pointer;
+  width: 150px;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-links li a:hover {
+  color: var(--primary-dark);
+}
+
+button {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: var(--primary-dark);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+button:hover {
+  background-color: var(--primary-light);
+}
+
+.buffer {
+  margin-top: 20px;
+  color: #ffffff;
+  margin-left: 75%;
+}
+
+.image-container {
+  text-align: center;
+  position: relative;
+  display: block;
+}
+
+img {
+  width: 1000px;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; /* Position the overlay absolutely within the container */
+  top: 80%; /* Position it in the middle vertically */
+  left: 40%; /* Position it in the middle horizontally */
+  transform: translate(-50%, -50%); /* Center it exactly */
+  background: rgba(255, 225, 64, 0.9); /* Semi-transparent background */
+  color: white; /* Text color */
+  padding: 20px; /* Padding inside the box */
+  border-radius: 6px; /* Optional: rounded corners */
+  text-align: center; /* Center text within the box */
+  font-size: 30px;
+}
+
+.inner-overlay {
+  background-color: #000000;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.container {
+  margin: 0 auto;
+  background-color: #ffffff;
+  width: 1000px;
+  height: 100px;
+}
+
+h1 {
+  background-color: #ffffff;
+}
+
+.intro {
+  background-color: #fff;
+}
+
+@media (max-width: 899px) {
+  .buffer {
+    margin-left: 50%;
+  }
+}
